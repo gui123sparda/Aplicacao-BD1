@@ -1,0 +1,1 @@
+Esse projeto é um estudo de como usar o Git e criar uma aplicação que se comunique com um banco de dados Postgres
