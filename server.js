@@ -13,21 +13,32 @@ app.use(express.json());
 
 // Configurar conexão com o PostgreSQL
 const pool = new Pool({
-  user: 'seu_usuario',
+  user: 'postgres',
   host: 'localhost',
-  database: 'seu_banco',
-  password: 'sua_senha',
+  database: 'Finjob',
+  password: 'Gui.smd*123',
   port: 5432,
 });
 
 // Rota simples para buscar dados
 app.get('/api/dados', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM sua_tabela');
+    const result = await pool.query('SELECT * FROM usuario');
     res.json(result.rows);
   } catch (error) {
     console.error('Erro ao buscar dados:', error);
     res.status(500).send('Erro ao buscar dados');
+  }
+});
+
+// Nova rota para listar usuários
+app.get('/api/usuarios', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM usuario');
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Erro ao buscar usuário:', error);
+    res.status(500).send('Erro ao buscar usuário');
   }
 });
 
