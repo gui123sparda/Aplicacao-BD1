@@ -1,0 +1,25 @@
+{
+  "name": "aplicacao-bd1",
+  "version": "1.0.0",
+  "description": "Esse projeto é um estudo de como usar o Git e criar uma aplicação que se comunique com um banco de dados Postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gui123sparda/Aplicacao-BD1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gui123sparda/Aplicacao-BD1/issues"
+  },
+  "homepage": "https://github.com/gui123sparda/Aplicacao-BD1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  }
+}
