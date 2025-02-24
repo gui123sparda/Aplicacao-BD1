@@ -1,12 +1,16 @@
 <template>
-  <div class="p-4">
-    <h1 class="text-xl font-bold mb-4">Dados do PostgreSQL</h1>
-    <button @click="listarUsuarios" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mb-4">Listar Usuários</button>
-    <ul>
-      <li v-for="usuario in usuarios" :key="usuario.id">
-        {{ usuario.nome }} - {{ usuario.email }}
-      </li>
-    </ul>
+  <div class="p-6 bg-gray-100 min-h-screen">
+    <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-2xl p-6">
+      <h1 class="text-2xl font-bold mb-6 text-center">📋 Lista de Usuários</h1>
+      <button @click="listarUsuarios" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300 mb-4">
+        Listar Usuários
+      </button>
+      <ul class="space-y-2">
+        <li v-for="usuario in usuarios" :key="usuario.id" class="p-3 bg-gray-50 rounded-lg shadow">
+          <span class="font-semibold">{{ usuario.nome }}</span> - {{ usuario.email }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -31,8 +35,4 @@ export default {
 };
 </script>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-}
-</style>
+<style src="./output.css"></style>

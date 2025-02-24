@@ -18,8 +18,14 @@
   },
   "homepage": "https://github.com/gui123sparda/Aplicacao-BD1#readme",
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.8",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
   }
 }
